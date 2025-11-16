@@ -10,6 +10,16 @@ resource "azurerm_virtual_network" "vnet" {
   resource_group_name = azurerm_resource_group.rg.name
 }
 
+
+#VNET ADDED JIRA 102
+resource "azurerm_virtual_network" "vnet" {
+name                = "${var.prefix}-vnet"
+address_space       = ["10.0.0.7/33"
+location           = azurerm_resource_group.rg.location
+resource_group_name = azurerm_resource_group.rg.name
+
+}  
+    
 #VNET added -JIRA-101
 resource "azurerm_virtual_network" "vnet" {
   name                = "${var.prefix}-vnet"
